@@ -2,7 +2,7 @@
 
 """This is the entry point of the program."""
 
-from languages import LANGUAGES
+from .languages import LANGUAGES
 
 def detect_language(text, languages=LANGUAGES):
     """Returns the detected language of given text."""
@@ -24,4 +24,4 @@ def addToDictionary(language, dictionary):
         else: dictionary[language] = 1
 
 def getHighestOccurringLanguage(dictionary):
-    return max(dictionary.iterkeys(), key=(lambda key: dictionary[key]))
+    return max(dictionary.keys(), key=(lambda key: dictionary[key]))
