@@ -21,7 +21,7 @@ LANGUAGES = [
                     'hier', 'eine', 'wenn', 'hat', 'all', 'sind', 'von',
                     'dich', 'war', 'haben', 'für', 'an', 'habe', 'da', 'nein',
                     'bin', 'noch', 'dir', 'uns', 'sich', 'nur',
-                    'einen', 'kann', 'dem']
+                    'einen', 'kann', 'dem', 'den']
     },
     {
         'name': 'English',

@@ -7,9 +7,7 @@ from languages import LANGUAGES
 
 def detect_language(text, languages=LANGUAGES):
     """Returns the detected language of given text."""
-    # implement your solution here
-    
-    
+ 
     '''
     Algorithm
     We should go through the user input, and see which language it corresponds to.
@@ -25,55 +23,29 @@ def detect_language(text, languages=LANGUAGES):
     numOfTimesLanguageOccurs = {}
     
     for word in text.split():
-        #if 'our' in text:
-        
         #print(word)
-        whichLanguageIsIt(word)
-
-
+        language = whichLanguageIsIt(word)
+        
+        if language is not None:
+            addToDictionary(language, numOfTimesLanguageOccurs)
     
+    print(numOfTimesLanguageOccurs)
+    return getHighestOccurringLanguage(numOfTimesLanguageOccurs)
 
 def whichLanguageIsIt(word):
     for dict in LANGUAGES:
-        if word in dict['common_words']:
-            print(word, "is in", dict['name'])
-            
-    
+        if word in dict['common_words']: 
+            #print(dict['name'])
+            return dict['name']
+            #print(word, "is in", dict['name'])
 
-#words = LANGUAGES[0]['common_words']
+def addToDictionary(language, dictionary):
+        if language in dictionary: dictionary[language] += 1
+        else: dictionary[language] = 1
 
-#if text[x] in LANGUAGES[0]:
-#    counter += 1
+def getHighestOccurringLanguage(dictionary):
+    return max(dictionary.iterkeys(), key=(lambda key: dictionary[key]))
 
+def languageIsNotNull(language):
+    return language is None
 
-
-
-
-text = "the this of what anthony steven"
-
-
-
-texts = {
-            "spanish": """
-                Lionel Andrés Messi Cuccittini (Rosario, 24 de junio de 1987),
-                conocido como Leo Messi, es un futbolista argentino11 que juega
-                como delantero en el Fútbol Club Barcelona y en la selección
-                argentina, de la que es capitán. Considerado con frecuencia el
-                mejor jugador del mundo y calificado en el ámbito deportivo como el
-                más grande de todos los tiempos, Messi es el único futbolista en la
-                historia que ha ganado cinco veces el FIFA Balón de Oro –cuatro de
-                ellos en forma consecutiva– y el primero en
-                recibir tres Botas de Oro.
-                """,
-            "german": """
-                Messi spielt seit seinem 14. Lebensjahr für den FC Barcelona.
-                Mit 24 Jahren wurde er Rekordtorschütze des FC Barcelona, mit 25
-                der jüngste Spieler in der La-Liga-Geschichte, der 200 Tore
-                erzielte. Inzwischen hat Messi als einziger Spieler mehr als 300
-                Erstligatore erzielt und ist damit Rekordtorschütze
-                der Primera División.
-                """
-        }
-        
-#detect_language(texts["spanish"], languages=LANGUAGES)
-detect_language(text, languages=LANGUAGES)
