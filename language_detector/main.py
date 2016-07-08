@@ -25,7 +25,3 @@ def addToDictionary(language, dictionary):
 
 def getHighestOccurringLanguage(dictionary):
     return max(dictionary.iterkeys(), key=(lambda key: dictionary[key]))
-
-def languageIsNotNull(language):
-    return language is None
-
