@@ -10,7 +10,7 @@ LANGUAGES = [
                     'o', 'poder', 'decir', 'este', 'ir', 'otro', 'ese', 'la',
                     'si', 'me', 'ya', 'ver', 'porque', 'dar', 'cuando', 'él',
                     'muy', 'sin', 'vez', 'mucho', 'saber', 'qué', 'sobre',
-                    'mi', 'alguno', 'mismo', 'yo', 'también', 'hasta']  # add your words here
+                    'mi', 'alguno', 'mismo', 'yo', 'también', 'hasta']
     },
     {
         'name': 'German',
@@ -31,7 +31,6 @@ LANGUAGES = [
                     'yes', 'my','go', 'because', 'where', 'who', 'why', 'other',
                     'always', 'me', 'also', 'day', 'us', 'to', 'have', 'not', 'on',
                     'be']
-            
     }
     #  include your extra languages here
 ]
