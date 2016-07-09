@@ -103,3 +103,4 @@ class TestLanguageDetector(unittest.TestCase):
     def test_detect_language_english_with_module_language_specification(self):
         result = detect_language(self.texts["english"], LANGUAGES)
         self.assertEqual(result.lower(), 'english')
+        
