@@ -9,7 +9,7 @@ def detect_language(text, languages=LANGUAGES):
     """Returns the detected lang of given text."""
     numOfTimesLanguageOccurs = {}
 
-    for word in text.split():
+    for word in text.lower().split():
         lang = which_language_is_it(word, languages)
         if lang is not None:
             add_to_dictionary(lang, numOfTimesLanguageOccurs)
